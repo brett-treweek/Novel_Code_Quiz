@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+    <title>Code Quiz</title>
+</head>
+  <body>
+    <div class="title">
+      <h1>Code Quiz</h1>
+      <div class="timer hide"></div>
+      <div class="score hide"></div>
+      <button id="start-btn" class="start far fa-play-circle"></button>
+    </div>
+
+    <div class="container">
+        <div id="question-container" class="hide">
+            <div id="question">Question</div>
+              <div id="answer-buttons" class="btn-box">
+                <button class="btn" id="an1">1. Answer</button>
+                <button class="btn" id="an2">2. Answer</button>
+                <button class="btn" id="an3">3. Answer</button>
+                <button class="btn" id="an4">4. Answer</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="scores-container hide">
+      <h2>High Scores</h2>
+        <div class="highscores"></div>
+    </div>
+
+    <div class="score-form hide">
+      <form action="" class="ID"></form>
+      <label for="Name" id="enterName">Enter your Name</label>
+      <input type="text" id="name" required>
+      <input type="submit" class="" id="submit">
+    </div>
+
+    <script defer src="./assets/jScript/script.js"></script>  
+  </body>
+</html>
