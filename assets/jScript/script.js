@@ -168,19 +168,24 @@ function checkAnswer4() {
     } else {incorrect()}
 }
 
+// This last bit took me forever to get right.
 //Submit Name and Show High Score Functions
 var initials = document.querySelector('#name')
-var highScoresList = document.querySelector('.highscores')
-var highScoreArray = [];
+var highScoresList = document.querySelector('.ul')
+
+if(localStorage.storageArray == null){
+    var highScoreArray = [{id: 'Brett Treweek', score: 1000}]
+} else {
+    var highScoreArray = JSON.parse(localStorage.getItem('storageArray'))
+}
 
 
 
 submitButton.addEventListener('click', submitName)
 function submitName() {
-    highScoreArray.push(points + ' ' + initials.value);
-    highScoreArray.sort();
-    highScoreArray.reverse();
-    localStorage.setItem('storageArray', highScoreArray)
+    var initial = initials.value   
+    highScoreArray.push({'id': initial, 'score': points});
+    localStorage.setItem('storageArray', JSON.stringify(highScoreArray))
     scoreForm.classList.add('hide')
     timer.classList.add('hide')
     score.classList.add('hide')
@@ -189,7 +194,19 @@ function submitName() {
     }
 
 function showHighScores() {
-        highScores.classList.remove('hide')
-        highScoresList.innerText = highScoreArray;
+    var ul = document.querySelector('.ul')
+    ul.replaceChildren()
+    highScoreArray.sort((a,b)=> (a.score > b.score ? 1 : -1))
+    highScoreArray.reverse()
+    highScores.classList.remove('hide')
+    for(let i = 0; i < highScoreArray.length; i++) {
+        var li = document.createElement('li')
+        var nameScore = highScoreArray[i].id + ' ' + highScoreArray[i].score
+        li.appendChild(document.createTextNode(nameScore));
+        highScoresList.appendChild(li);
+    }
+    
     }
 
+// localStorage.clear()
+// console.log(highScoreArray)
