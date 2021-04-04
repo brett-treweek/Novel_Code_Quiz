@@ -232,11 +232,23 @@ li:first-child {
     h1 {
         font-size: 40px;
         margin-top: 32px;
+        margin-bottom: 0%;
+    }
+
+    .scores-container {
+        position: fixed;
+        top: 35%;
+    }
+
+    .btn:hover {
+        border: 1px transparent solid;
+        background-color: #fff;
+        color: rgb(0, 0, 0);
     }
 
     #start-btn{
-        top: 30%;
-        font-size: 100px;
+        top: 0%;
+        font-size: 70px;
     }
 
     #question {
@@ -271,8 +283,8 @@ li:first-child {
 @media(max-height: 670px) {
 
     #start-btn{
-        top: 15%;
-        font-size: 80px;
+        top: 10%;
+        font-size: 70px;
     }
 
     #question {

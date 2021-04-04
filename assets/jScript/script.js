@@ -38,7 +38,7 @@ const A3 = [{1:'toString()'},
             {4:'toSpring()'}]
                      
 const question4 = {  Q4: 'Who created Javascript'}
-const A4 = [{1:'Adolf Hitler'},
+const A4 = [{1:'Vladamir Putin'},
             {2:'Brandon Psych'},
             {3:'Sir Lewis Hamilton'},
             {4:'Brendan Eich'}]
