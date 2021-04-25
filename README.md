@@ -2,7 +2,7 @@
 
 ![Alt text](./assets/images/screenshot1.png)
 
-##Client Requirements
+## Client Requirements
 - This project involved creating a short JavaScript Quiz to help students prepare for interview scenarios which involve coding assesments.
 
 - The Client requested that the quiz be polished, with dynamically updated HTML and CSS, and powered by Javascript. 
